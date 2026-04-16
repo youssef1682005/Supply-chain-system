@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupplySync - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-box">
+                    <span class="material-symbols-outlined logo-icon">deployed_code</span>
+                </div>
+                <h2>SupplySync</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active" data-view="dashboard">
+                    <span class="material-symbols-outlined">dashboard</span> Dashboard
+                </a>
+                <a href="#orders" class="nav-item" data-view="orders">
+                    <span class="material-symbols-outlined">shopping_cart</span> Orders
+                </a>
+                <a href="#inventory" class="nav-item" data-view="inventory">
+                    <span class="material-symbols-outlined">inventory_2</span> Inventory
+                </a>
+                <a href="#shipments" class="nav-item" data-view="shipments">
+                    <span class="material-symbols-outlined">flight_takeoff</span> Shipments
+                </a>
+                <a href="#warehouses" class="nav-item" data-view="warehouses">
+                    <span class="material-symbols-outlined">warehouse</span> Warehouses
+                </a>
+                <a href="#suppliers" class="nav-item" data-view="suppliers">
+                    <span class="material-symbols-outlined">storefront</span> Suppliers
+                </a>
+                <a href="#reports" class="nav-item" data-view="reports">
+                    <span class="material-symbols-outlined">bar_chart</span> Reports
+                </a>
+                <div class="nav-divider"></div>
+                <a href="#users" class="nav-item" data-view="users">
+                    <span class="material-symbols-outlined">group</span> Users
+                </a>
+                <a href="#settings" class="nav-item" data-view="settings">
+                    <span class="material-symbols-outlined">settings</span> Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="search-bar">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="text" placeholder="Search orders, inventory, shipments...">
+                </div>
+                <div class="topbar-actions">
+                    <button class="icon-btn notification-btn">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="badge">3</span>
+                    </button>
+                    <div class="user-profile">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="User Avatar" class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Alex Johnson</span>
+                            <span class="user-role">Administrator</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dynamic View Container -->
+            <div id="view-container" class="view-container">
+                <!-- Views will be injected here by app.js -->
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
